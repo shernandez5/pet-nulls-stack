@@ -1,4 +1,16 @@
+deployment "simple" {
+  variables = {
+    prefix           = "simple"
+    instances        = 1
+  }
+}
 
+deployment "medium" {
+  variables = {
+    prefix           = "medium"
+    instances        = 2
+  }
+}
 
 deployment "complex" {
   variables = {
@@ -7,10 +19,16 @@ deployment "complex" {
   }
 }
 
-orchestrate "auto_approve" "no_pet_changes" {
-  check {
-    # Check that the pet component has no changes 
-    condition = context.plan.component_changes["component.pet"].total == 0
-    error_message = "Changes proposed to pet component."
+deployment "very-complex" {
+  variables = {
+    prefix           = "very-complex"
+    instances        = 4
+  }
+}
+
+deployment "ultra-complex" {
+  variables = {
+    prefix           = "ultra-complex"
+    instances        = 5
   }
 }
