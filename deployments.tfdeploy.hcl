@@ -29,6 +29,6 @@ deployment "very-complex" {
 deployment "ultra-complex" {
   variables = {
     prefix           = "ultra-complex"
-    instances        = 5
+    instances        = 9
   }
 }
