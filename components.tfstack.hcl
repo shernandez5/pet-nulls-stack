@@ -21,23 +21,12 @@ required_providers {
 provider "random" "this" {}
 provider "null" "this" {}
 
-component "pet" {
-  source = "./pet"
-
-  inputs = {
-    prefix = var.prefix
-  }
-
-  providers = {
-    random = provider.random.this
-  }
-}
 
 component "nulls" {
   source = "./nulls"
 
   inputs = {
-    pet       = component.pet.name
+    pet       = "meow"
     instances = var.instances
   }
 
