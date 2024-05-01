@@ -15,4 +15,18 @@ deployment "complex" {
   }
 }
 
+deployment "complex2" {
+  variables = {
+    prefix           = "complex"
+    instances        = 5
+  }
+}
+
+deployment "complex3" {
+  variables = {
+    prefix           = "complex"
+    instances        = 7
+  }
+}
+
 
